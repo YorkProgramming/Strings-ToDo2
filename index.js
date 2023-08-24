@@ -35,3 +35,25 @@ console.log(reverseString("creature"));
 /* Build a standalone function to remove strings of even lengths from a given array.
 For array containing ["Nope!","Its","Kris","starting","with","K!","(instead","of","Chris","with","C)","."],
 change that same array to ["Nope!","Its","Chris","."].
+*/
+
+function removeEvenLengthStrings(arr){
+    for(var i = 0; i < arr.length; i++){
+
+        if(arr[i].length % 2 == 0){
+            arr.splice(i,1);
+            i--;
+        }
+    }
+
+    return arr;
+}
+
+//Example:
+console.log(removeEvenLengthStrings(["Nope!","Its","Kris","starting","with","K!","(instead","of","Chris","with","C)","."]));
+
+//We loop through the array and check if the length of the string is even
+//If it is, we remove it from the array and decrement i by 1
+//We return the array
+
+//#############################################################################################################################
