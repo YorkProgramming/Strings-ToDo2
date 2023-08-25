@@ -66,3 +66,29 @@ return a string containing that value in Roman numeral representation.
 In this representation, I is 1, V is 5, X is 10, L = 50, C = 100, D = 500, 
 and M = 1000. Remember that 4 is IV, 349 is CCCIL and 444 is CDXLIV.
 */
+
+function integerToRomanNumerals(num){
+    var roman = "";
+    var romanNumerals = ["M","CM","D","CD","C","XC","L","XL","X","IX","V","IV","I"];
+    var values = [1000,900,500,400,100,90,50,40,10,9,5,4,1];
+
+    for(var i = 0; i < values.length; i++){
+        while(num >= values[i]){
+            roman += romanNumerals[i];
+            num -= values[i];
+        }
+    }
+
+    return roman;
+}
+
+//Example:
+console.log(integerToRomanNumerals(444));
+
+//We create a variable roman to hold the roman numeral string
+//We create an array of roman numerals and an array of their corresponding values
+//We loop through the values array and check if the number is greater than or equal to the current value
+//If it is, we add the roman numeral to the string and subtract the value from the number
+//We return the roman numeral string
+
+//#############################################################################################################################
