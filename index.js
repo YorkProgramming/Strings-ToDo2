@@ -102,3 +102,32 @@ Given a string containing a Roman numeral representation of a positive integer,
 return the integer. 
 Remember that III is 3, DCIX is 609 and MXDII is 149 
 */
+
+function romanNumeralsToInteger(str){
+    var values = {"M":1000,"D":500,"C":100,"L":50,"X":10,"V":5,"I":1};
+    var sum = 0;
+
+    for(var i = 0; i < str.length; i++){
+        if(values[str[i]] < values[str[i+1]]){
+            sum += values[str[i+1]] - values[str[i]];
+            i++;
+        }
+        else{
+            sum += values[str[i]];
+        }
+    }
+
+    return sum;
+}
+
+//Example:
+console.log(romanNumeralsToInteger("MXDII"));
+
+//We create an object with the roman numerals as keys and their corresponding values as values
+//We create a variable sum to hold the sum of the roman numerals
+//We loop through the string and check if the current value is less than the next value
+//If it is, we add the difference of the next value and the current value to the sum and increment i by 1
+//If it isn't, we add the current value to the sum
+//We return the sum
+
+//#############################################################################################################################
