@@ -92,3 +92,13 @@ console.log(integerToRomanNumerals(444));
 //We return the roman numeral string
 
 //#############################################################################################################################
+
+//4
+//Roman Numerals to Integer
+
+/* Sept 16, 2014 headline: “Ancient Computer Found in Roman Shipwreck”. 
+Comprising 30 bronze gears, its wooden frame features 2000 characters.
+Given a string containing a Roman numeral representation of a positive integer, 
+return the integer. 
+Remember that III is 3, DCIX is 609 and MXDII is 149 
+*/
